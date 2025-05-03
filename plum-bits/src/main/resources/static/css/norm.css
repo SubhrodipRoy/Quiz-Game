@@ -1,0 +1,70 @@
+/* Fullscreen body and centered layout */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-title {
+    margin: 20px 0;
+    font-size: 3rem;
+    color: #c77dff;
+}
+
+/* Swiper Container */
+.swiper-container {
+    width: 480px;
+    height: 720px;
+}
+
+/* Card Slides */
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height:100% ;
+    transition: transform 0.75s ease;
+    will-change: transform;
+}
+.domain-icon {
+    position: absolute;
+    top: 280px;
+    left: 160px;
+    width: 160px;
+    filter: invert(100%) brightness(200%) contrast(150%);
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, filter 0.4s;
+}
+
+/* Glow on hover */
+.domain-icon:hover {
+    filter: invert(100%) brightness(200%) contrast(150%) drop-shadow(0 0 8px yellow);
+    transform: scale(1.1);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.overlay h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    color: #00d9ff;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 4px #eeff00,
+        0 0 8px #f4ff58,
+        0 0 12px #ffffff;
+    margin: 0.5rem 0;
+}
