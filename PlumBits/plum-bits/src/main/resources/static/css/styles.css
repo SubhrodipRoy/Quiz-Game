@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #6b0096, #bc0ed3);
+    color: #f0e6ff;
+  }
+  .plum-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through */
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .plum {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    opacity: 0.3;
+    animation: floatUp 20s linear infinite;
+    will-change: transform;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) translateX(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.3;
+    }
+    90% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-200px) translateX(30px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  
+  h1 {
+    color: #e0b3ff;
+    text-shadow: 2px 2px 4px #000;
+}
+  .container {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .logo {
+    width: 480px;
+    vertical-align: middle;
+    filter: invert(100%) brightness(200%) contrast(150%)
+    drop-shadow(0 0 1px rgb(255, 255, 255))
+          drop-shadow(0 0 4px rgb(0, 255, 255))
+          drop-shadow(0 0 32px rgb(255, 255, 0))
+          drop-shadow(0 0 12px rgba(0, 255, 255, 0.753));
+  }
+  
+  .plumbits-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 48px;
+    font-size: 128px;
+    margin-top: 1rem;
+  }
+  
+  .plum-text {
+    font-family: 'Fredoka One', cursive;
+    color: #4c0073; /* Hot pink */
+    text-shadow: 10px 5px rgb(255, 255, 0);
+  }
+
+  .bits-text {
+    font-family: 'VT323', monospace;
+    font-size: 192px;
+    color: #7bffff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    display: flex;
+    flex: bottom;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    /*animation: digitalBreak 2s infinite;*/
+    animation: chaoticVibrate 0.2s infinite;
+
+  }
+  
+  .binary-i {
+    font-size: 96px;
+    display: inline-block;
+    text-align: center;
+    flex: bottom;
+    justify-content: center;
+    line-height: 120px;
+    vertical-align: middle;
+    margin: 0 0.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 2px #00ffff, 0 0 10px #00ffff;
+  }
+
+  @keyframes chaoticVibrate {
+    0%, 100%{
+      top: -3.5px;
+      left: 0;
+      opacity: 0.5;
+    }
+    7%{
+      top: 0;
+      left: -5px;
+      opacity: 0.15;
+    }
+    15%{
+      top: 3.5px;
+      left: 0;
+      opacity: 1;
+    }
+    60%{
+      top: 0;
+      left: 5px;
+    }
+    68%{
+      top: 0;
+      left: 0;
+      opacity: 0.9;
+    }
+  }
+  
+  
+  
+  .mode-buttons {
+    background-color: transparent;
+    color: #e6d0ff;
+    border: 2px solid #c07aff;
+    transition: 0.3s ease;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .mode {
+    background-color: #ff69b4;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  
+  .mode:hover {
+    background-color: #c07aff;
+    color: #2c003e;
+    box-shadow: 0 0 15px #e0b3ff;
+  }
+  a.mode {
+    text-decoration: none; /* removes underline */
+    color: inherit;         /* keeps the text color same as surrounding */
+  }
+  
+  .plum-section {
+    margin-top: 3rem;
+  }
+  
+  .plum-button {
+    
+    background-color: #8a2be2;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 25px #ff69b4;
+  }
+  
+  .plum-button:hover {
+    background-color: #ff1493;
+  }
+  
+  .plum-warning {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #ffccff;
+    font-style: italic;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .plum-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: swing 3s ease-in-out infinite alternate;
+    transform-origin: top center;
+  }
+  
+  .plum-line {
+    width: 2px;
+    height: 60px;
+    background-color: #ccc;
+  }
+  
+  .plum {
+    width: 30px;
+    height: 40px;
+    background: #5e2c82;
+    border-radius: 50% 50% 60% 60% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+  }
+  
+  
