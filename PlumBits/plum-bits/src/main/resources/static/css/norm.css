@@ -35,7 +35,7 @@ body {
     align-items: flex-end;
     justify-content: center;
     height:100% ;
-    transition: transform 0.75s ease;
+    transition: transform 0.5s ease;
     will-change: transform;
 }
 .domain-icon {
@@ -43,8 +43,8 @@ body {
     top: 280px;
     left: 160px;
     width: 160px;
-    filter: invert(100%) brightness(200%) contrast(150%);
-    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, filter 0.4s;
+    filter: invert(100%) brightness(200%) contrast(150%) opacity(0.001);
+    transition: transform 1s ease-in-out, filter 1s ease-in-out, filter 1s;
 }
 
 /* Glow on hover */

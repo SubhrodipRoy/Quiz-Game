@@ -16,5 +16,10 @@ public class HomeController {
         return "norm"; // Looks for templates/norm.html
     }
 
-    // Add more mappings as needed
+    @GetMapping("/norm/science")
+    public String scienceQuiz() {
+        return "norm/science"; // Looks for templates/norm/science.html
+    }
+
+    // Add more mappings as needed for other quiz pages
 }
