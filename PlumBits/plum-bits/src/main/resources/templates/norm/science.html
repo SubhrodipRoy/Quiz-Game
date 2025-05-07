@@ -1,18 +1,43 @@
-<!-- src/main/resources/templates/norm/science.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
     <title>Science Quiz</title>
-    <link rel="stylesheet" th:href="@{/css/norm/science.css}">
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question { margin-bottom: 30px; }
+        .option { margin-left: 20px; }
+    </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Science Quiz</h1>
-        <div id="question-box"></div>
-        <button id="next-button">Next Question</button>
-    </div>
+    <h1>Science Quiz</h1>
 
-    <script th:src="@{/js/norm/science.js}"></script>
+    <form method="post" action="#">
+        <div th:each="question, iterStat : ${questions}" class="question">
+            <p><strong th:text="'Q' + ${iterStat.index + 1} + ': ' + ${question.question}">Question text</strong></p>
+
+            <label class="option">
+                <input type="radio" th:name="'q' + ${question.id}" th:value="A"/> 
+                <span th:text="${question.optionA}">Option A</span>
+            </label><br/>
+
+            <label class="option">
+                <input type="radio" th:name="'q' + ${question.id}" th:value="B"/> 
+                <span th:text="${question.optionB}">Option B</span>
+            </label><br/>
+
+            <label class="option">
+                <input type="radio" th:name="'q' + ${question.id}" th:value="C"/> 
+                <span th:text="${question.optionC}">Option C</span>
+            </label><br/>
+
+            <label class="option">
+                <input type="radio" th:name="'q' + ${question.id}" th:value="D"/> 
+                <span th:text="${question.optionD}">Option D</span>
+            </label><br/>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
